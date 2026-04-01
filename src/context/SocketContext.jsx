@@ -11,7 +11,7 @@ export const SocketProvider = ({ children }) => {
     useEffect(() => {
         if (!user) return;
 
-        const newSocket = io("http://localhost:5000");
+        const newSocket = io(import.meta.env.VITE_SOCKET_URL);
 
         newSocket.emit("join", user._id);
 
