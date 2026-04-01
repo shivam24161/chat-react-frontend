@@ -5,6 +5,7 @@ import { AuthProvider } from "./context/AuthContext";
 import { SocketProvider } from "./context/SocketContext";
 import Signup from "./pages/Signup";
 import PrivateRoute from "./components/PrivateRoute";
+import './App.css';
 
 export default function App() {
   return (

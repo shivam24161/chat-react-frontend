@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "../api/axios";
 import { useAuth } from "../context/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
     const [form, setForm] = useState({ email: "", password: "" });
@@ -36,12 +36,12 @@ export default function Login() {
                     Login
                 </button>
             </div>
-            <p className="text-sm mt-3 text-center">
+            {/* <p className="text-sm mt-3 text-center">
                 Don't have an account?{" "}
                 <Link to="/signup" className="text-blue-500">
                     Signup
                 </Link>
-            </p>
+            </p> */}
         </div>
     );
 }
