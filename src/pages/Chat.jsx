@@ -39,7 +39,7 @@ export default function Chat() {
     }, []);
 
     return (
-        <div className="flex h-screen">
+        <div className="flex chat-container">
             {/* <Sidebar
                 setSelectedUser={handleSelectUser}
                 unread={unread}
