@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
 import { AuthProvider } from "./context/AuthContext";
@@ -11,7 +11,7 @@ export default function App() {
   return (
     <AuthProvider>
       <SocketProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route
               path="/"
@@ -24,7 +24,7 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </SocketProvider>
     </AuthProvider>
   );
